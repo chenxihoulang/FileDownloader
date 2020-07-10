@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etFileUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入文件路径"
+        android:text="http://music.163.com/song/media/outer/url?id=531295350.mp3" />
+
+    <EditText
+        android:id="@+id/etCachePath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="文件缓存路径"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btnDownload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AsyncTask下载文件" />
+
+    <Button
+        android:id="@+id/btnCancelDownload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AsyncTask取消下载文件" />
+
+    <ProgressBar
+        android:id="@+id/pbProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:indeterminate="false"
+        android:indeterminateOnly="false"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/progress_bar_bg" />
+
+    <TextView
+        android:id="@+id/tvProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvWorkerState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnWorkerDownload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WorkerManager下载文件" />
+
+    <Button
+        android:id="@+id/btnCancelWorker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WorkerManager取消下载文件" />
+
+
+    <Button
+        android:id="@+id/btnClearCache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="清理缓存" />
+</LinearLayout>
